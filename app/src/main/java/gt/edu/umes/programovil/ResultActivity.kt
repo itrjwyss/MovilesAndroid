@@ -1,10 +1,11 @@
-package gt.edu.umes.programovil.calculator
+package gt.edu.umes.programovil
 
 import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.enableEdgeToEdge
 import gt.edu.umes.programovil.databinding.ActivityResultBinding
+import java.text.DecimalFormat
 
 class ResultActivity : ComponentActivity() {
 
@@ -17,6 +18,8 @@ class ResultActivity : ComponentActivity() {
         binding = ActivityResultBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.tvResult.text = "${intent.extras?.getDouble("RESULT")}"
+        val result = intent.extras?.getDouble("RESULT") ?: 0.0 // Handle null case
+        val formatter = DecimalFormat("#.00")
+        binding.tvResult.text = formatter.format(result)
     }
 }

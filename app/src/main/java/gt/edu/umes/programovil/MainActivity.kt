@@ -5,18 +5,21 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material3.ElevatedButton
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.tooling.preview.Preview
 import gt.edu.umes.programovil.calculator.CalculatorActivity
+import gt.edu.umes.programovil.imc.ImcActivity
 import gt.edu.umes.programovil.ui.theme.PrograMovilTheme
 
 class MainActivity : ComponentActivity() {
@@ -25,27 +28,44 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             PrograMovilTheme {
-                Box(modifier = Modifier.fillMaxSize()) {
-                    Greeting(
-                        modifier = Modifier.align(Alignment.Center)
-                    )
-                }
+                Greeting()
             }
         }
     }
 }
 
 @Composable
-fun Greeting(modifier: Modifier = Modifier) {
+fun Greeting() {
     val context = LocalContext.current
 
-    ElevatedButton(
-        modifier = modifier,
-        onClick = {
-            context.startActivity(Intent(context, CalculatorActivity::class.java))
-        }
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(
+                color = colorResource(id = R.color.background_screen)
+            ),
     ) {
-        Text(text = "Calculadora")
+        Column(
+            modifier = Modifier.align(Alignment.Center)
+        ) {
+            ElevatedButton(
+                onClick = {
+                    context.startActivity(Intent(context, CalculatorActivity::class.java))
+                }
+            ) {
+                Text(
+                    text = "Calculadora"
+                )
+            }
+
+            ElevatedButton(
+                onClick = {
+                    context.startActivity(Intent(context, ImcActivity::class.java))
+                }
+            ) {
+                Text(text = "Cálculo IMC")
+            }
+        }
     }
 }
 

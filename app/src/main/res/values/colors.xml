@@ -9,5 +9,10 @@
     <color name="white">#FFFFFFFF</color>
 
 
-    <color name="background_component">#1D1E33</color>
+    <color name="background_screen">#0c0b1f</color>
+    <color name="background_component">#1e1e31</color>
+    <color name="background_selected">#111325</color>
+    <color name="buttons">#4f1ecd</color>
+    <color name="icons">#fefdff</color>
+    <color name="texts">#78788a</color>
 </resources>

@@ -6,6 +6,7 @@ import android.text.Editable
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.enableEdgeToEdge
+import gt.edu.umes.programovil.ResultActivity
 import gt.edu.umes.programovil.databinding.ActivityCalculatorBinding
 
 class CalculatorActivity : ComponentActivity() {
