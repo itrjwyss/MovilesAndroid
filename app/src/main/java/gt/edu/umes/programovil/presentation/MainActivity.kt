@@ -19,6 +19,7 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.tooling.preview.Preview
 import gt.edu.umes.programovil.R
 import gt.edu.umes.programovil.presentation.calculator.CalculatorActivity
+import gt.edu.umes.programovil.presentation.contact.ContactActivity
 import gt.edu.umes.programovil.presentation.imc.ImcActivity
 import gt.edu.umes.programovil.presentation.insert.InsertFormActivity
 import gt.edu.umes.programovil.presentation.list.ListActivity
@@ -81,6 +82,14 @@ fun Greeting() {
                 }
             ) {
                 Text(text = "Ver Información")
+            }
+
+            ElevatedButton(
+                onClick = {
+                    context.startActivity(Intent(context, ContactActivity::class.java))
+                }
+            ) {
+                Text(text = "Contactos")
             }
         }
     }

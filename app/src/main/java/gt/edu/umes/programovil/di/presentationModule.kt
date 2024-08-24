@@ -11,7 +11,8 @@ val presentationModule = module {
             application = get(),
             informationRepository = get()
         )
-
+    }
+    viewModel {
         ListViewModel(
             application = get(),
             informationRepository = get()
