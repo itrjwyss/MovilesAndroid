@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.Flow
 interface InformationDao {
 
     @Query("$SQL_SELECT_ALL $INFORMATION_TABLE_NAME")
-    fun findAll(): List<InformationEntity>
+    suspend fun findAll(): List<InformationEntity>
 
     @Insert
     suspend fun insert(informationEntity: InformationEntity): Long?

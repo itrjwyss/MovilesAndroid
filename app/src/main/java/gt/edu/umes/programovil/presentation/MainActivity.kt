@@ -21,6 +21,7 @@ import gt.edu.umes.programovil.R
 import gt.edu.umes.programovil.presentation.calculator.CalculatorActivity
 import gt.edu.umes.programovil.presentation.imc.ImcActivity
 import gt.edu.umes.programovil.presentation.insert.InsertFormActivity
+import gt.edu.umes.programovil.presentation.list.ListActivity
 import gt.edu.umes.programovil.presentation.theme.PrograMovilTheme
 
 class MainActivity : ComponentActivity() {
@@ -47,7 +48,8 @@ fun Greeting() {
             ),
     ) {
         Column(
-            modifier = Modifier.align(Alignment.Center)
+            modifier = Modifier
+                .align(Alignment.Center)
         ) {
             ElevatedButton(
                 onClick = {
@@ -71,6 +73,14 @@ fun Greeting() {
                 }
             ) {
                 Text(text = "Ingresar Información")
+            }
+
+            ElevatedButton(
+                onClick = {
+                    context.startActivity(Intent(context, ListActivity::class.java))
+                }
+            ) {
+                Text(text = "Ver Información")
             }
         }
     }

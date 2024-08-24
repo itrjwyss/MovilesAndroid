@@ -7,7 +7,7 @@ class InformationRepository(
     private val dao: InformationDao
 ) {
 
-    val all = dao.findAll()
+    suspend fun findAll() = dao.findAll()
 
     suspend fun insert(informationEntity: InformationEntity) =
         dao.insert(informationEntity)

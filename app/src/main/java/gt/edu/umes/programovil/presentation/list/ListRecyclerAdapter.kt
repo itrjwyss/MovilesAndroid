@@ -10,7 +10,7 @@ import gt.edu.umes.programovil.databinding.ItemPictureBinding
 
 class ListRecyclerAdapter(
     private val context: Context,
-    val list: List<InformationEntity>
+    private val list: List<InformationEntity>
 ): RecyclerView.Adapter<ListRecyclerAdapter.PictureHolder>() {
 
     inner class PictureHolder(val binding: ItemPictureBinding): RecyclerView.ViewHolder(binding.root)

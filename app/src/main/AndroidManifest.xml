@@ -20,6 +20,9 @@
         android:theme="@style/Theme.PrograMovil"
         tools:targetApi="31">
         <activity
+            android:name=".presentation.list.ListActivity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.insert.InsertFormActivity"
             android:exported="false" />
         <activity
