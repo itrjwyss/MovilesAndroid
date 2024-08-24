@@ -1,4 +1,4 @@
-package gt.edu.umes.programovil.calculator
+package gt.edu.umes.programovil.presentation.calculator
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,7 +6,7 @@ import android.text.Editable
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.enableEdgeToEdge
-import gt.edu.umes.programovil.ResultActivity
+import gt.edu.umes.programovil.presentation.ResultActivity
 import gt.edu.umes.programovil.databinding.ActivityCalculatorBinding
 
 class CalculatorActivity : ComponentActivity() {

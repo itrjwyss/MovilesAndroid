@@ -1,4 +1,4 @@
-package gt.edu.umes.programovil.imc
+package gt.edu.umes.programovil.presentation.imc
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -7,7 +7,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.enableEdgeToEdge
 import com.google.android.material.slider.Slider
 import gt.edu.umes.programovil.R
-import gt.edu.umes.programovil.ResultActivity
+import gt.edu.umes.programovil.presentation.ResultActivity
 import gt.edu.umes.programovil.databinding.ActivityImcBinding
 import kotlin.math.pow
 

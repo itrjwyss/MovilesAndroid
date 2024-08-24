@@ -1,4 +1,4 @@
-package gt.edu.umes.programovil.ui.theme
+package gt.edu.umes.programovil.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 

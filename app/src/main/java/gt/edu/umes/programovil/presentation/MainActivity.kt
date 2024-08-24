@@ -1,4 +1,4 @@
-package gt.edu.umes.programovil
+package gt.edu.umes.programovil.presentation
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,7 +9,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.size
 import androidx.compose.material3.ElevatedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -18,9 +17,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.tooling.preview.Preview
-import gt.edu.umes.programovil.calculator.CalculatorActivity
-import gt.edu.umes.programovil.imc.ImcActivity
-import gt.edu.umes.programovil.ui.theme.PrograMovilTheme
+import gt.edu.umes.programovil.R
+import gt.edu.umes.programovil.presentation.calculator.CalculatorActivity
+import gt.edu.umes.programovil.presentation.imc.ImcActivity
+import gt.edu.umes.programovil.presentation.insert.InsertFormActivity
+import gt.edu.umes.programovil.presentation.theme.PrograMovilTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,9 +54,7 @@ fun Greeting() {
                     context.startActivity(Intent(context, CalculatorActivity::class.java))
                 }
             ) {
-                Text(
-                    text = "Calculadora"
-                )
+                Text(text = "Calculadora")
             }
 
             ElevatedButton(
@@ -64,6 +63,14 @@ fun Greeting() {
                 }
             ) {
                 Text(text = "Cálculo IMC")
+            }
+
+            ElevatedButton(
+                onClick = {
+                    context.startActivity(Intent(context, InsertFormActivity::class.java))
+                }
+            ) {
+                Text(text = "Ingresar Información")
             }
         }
     }
